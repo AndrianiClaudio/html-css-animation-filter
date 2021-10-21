@@ -93,12 +93,12 @@
 
 .ex-10-icon {
     font-size: 60px;
-    animation-name: spin;
+    animation-name: reverse-spin;
     animation-duration: 1.2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-@keyframes spin {
+@keyframes reverse-spin {
     from {
         transform: rotate(360deg);
     }
@@ -106,9 +106,28 @@
         transform: rotate(0);
     }
 }
+
 .ex-11-icon {
     font-size: 60px;
 }
+.ex-11-icon:hover {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(310deg);
+    }
+    100% {transform: rotate(0);
+    }
+
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
